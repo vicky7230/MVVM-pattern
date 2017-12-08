@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "868689774138",
+    "firebase_url": "https://paprika-876be.firebaseio.com",
+    "project_id": "paprika-876be",
+    "storage_bucket": "paprika-876be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868689774138:android:e4f8e946d1aa767d",
+        "android_client_info": {
+          "package_name": "com.paprika.thali"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868689774138-9pfir7etlt5heajud6cp7mmqspu532mu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQdU1pvMkFaaVIVDSr1yolIfFV76vLM6o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

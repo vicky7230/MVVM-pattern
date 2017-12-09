@@ -2,6 +2,7 @@ package com.paprika.thali.di.module
 
 import android.arch.persistence.room.Room
 import android.content.Context
+import com.google.firebase.firestore.FirebaseFirestore
 import com.paprika.thali.ThaliApplication
 import com.paprika.thali.data.AppDataManager
 import com.paprika.thali.data.DataManager
@@ -35,8 +36,15 @@ class ApplicationModule {
     }
 
     @Provides
-    fun probideRoomDatabase(@ApplicationContext context: Context): AppDatabase {
+    @Singleton
+    fun provideRoomDatabase(@ApplicationContext context: Context): AppDatabase {
         return Room.databaseBuilder(context, AppDatabase::class.java, "recipes_db").build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideFirebaseFirestoreDb(): FirebaseFirestore {
+        return FirebaseFirestore.getInstance()
     }
 
     @Provides

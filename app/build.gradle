@@ -42,6 +42,7 @@ dependencies {
     implementation "com.google.firebase:firebase-firestore:${versions.firebase}"
     implementation "io.reactivex.rxjava2:rxandroid:${versions.rxAndroid}"
     implementation "io.reactivex.rxjava2:rxjava:${versions.rxJava}"
+    implementation "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:${versions.rxBindings}"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'

@@ -2,6 +2,7 @@ package com.paprika.thali
 
 import android.app.Activity
 import android.app.Application
+import com.paprika.thali.di.component.DaggerApplicationComponent
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector

@@ -14,8 +14,10 @@ buildscript {
             'googleServices'  : '3.1.1',
             'firebase'        : '11.6.2',
             'rxAndroid'       : '2.0.1',
-            'rxJava'          : '2.1.7'
+            'rxJava'          : '2.1.7',
+            'rxBindings'      : '2.0.0'
     ]
+
     repositories {
         google()
         jcenter()

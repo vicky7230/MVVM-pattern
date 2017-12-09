@@ -2,12 +2,14 @@ package com.paprika.thali.data.db.room
 
 import android.arch.persistence.room.ColumnInfo
 import android.arch.persistence.room.Entity
+import android.arch.persistence.room.PrimaryKey
 
 /**
  * Created by vicky on 7/12/17.
  */
 @Entity(tableName = "recipes")
 data class Recipe(
+        @PrimaryKey
         @ColumnInfo(name = "id")
         val id: Int,
 

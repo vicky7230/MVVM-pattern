@@ -17,7 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.base.BaseActivity"></activity>
+        <activity android:name=".ui.base.BaseActivity" />
+        <activity android:name=".ui.recipes.RecipesActivity"></activity>
     </application>
 
 </manifest>

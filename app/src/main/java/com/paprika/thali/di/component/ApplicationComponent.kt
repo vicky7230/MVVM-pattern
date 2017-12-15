@@ -6,6 +6,7 @@ import dagger.Component
 import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 import dagger.BindsInstance
+import com.paprika.thali.di.module.ActivityBuilder
 
 
 /**
@@ -14,7 +15,8 @@ import dagger.BindsInstance
 @Singleton
 @Component(modules = [
     AndroidSupportInjectionModule::class,
-    ApplicationModule::class
+    ApplicationModule::class,
+    ActivityBuilder::class
 ])
 interface ApplicationComponent {
     @Component.Builder

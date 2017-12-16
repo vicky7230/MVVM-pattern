@@ -3,6 +3,7 @@ package com.paprika.thali.di.module
 import android.arch.persistence.room.Room
 import android.content.Context
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.gson.Gson
 import com.paprika.thali.ThaliApplication
 import com.paprika.thali.data.AppDataManager
 import com.paprika.thali.data.DataManager
@@ -28,6 +29,11 @@ class ApplicationModule {
     @ApplicationContext
     fun provideContext(thaliApplication: ThaliApplication): Context {
         return thaliApplication.applicationContext
+    }
+
+    @Provides
+    fun provideGson(): Gson {
+        return Gson()
     }
 
     @Provides

@@ -1,7 +1,9 @@
 package com.paprika.thali.data
 
 import com.paprika.thali.data.db.DbHelper
+import com.paprika.thali.data.db.room.Recipe
 import com.paprika.thali.data.network.ApiHelper
+import io.reactivex.Flowable
 import javax.inject.Inject
 
 
@@ -10,8 +12,12 @@ import javax.inject.Inject
  */
 class AppDataManager @Inject constructor(val apiHelper: ApiHelper, val dbHelper: DbHelper) : DataManager {
 
-    override fun getRecipes() {
-        apiHelper.getRecipes()
+    override fun getRecipes(): MutableList<Recipe> {
+        return apiHelper.getRecipes()
+    }
+
+    override fun saveRecipes(list: MutableList<Recipe>): Flowable<Long> {
+        return dbHelper.saveRecipes(list)
     }
 
 }

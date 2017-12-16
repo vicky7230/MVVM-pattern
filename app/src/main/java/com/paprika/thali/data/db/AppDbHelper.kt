@@ -1,6 +1,8 @@
 package com.paprika.thali.data.db
 
 import com.paprika.thali.data.db.room.AppDatabase
+import com.paprika.thali.data.db.room.Recipe
+import io.reactivex.Flowable
 import javax.inject.Inject
 
 
@@ -9,7 +11,7 @@ import javax.inject.Inject
  */
 class AppDbHelper @Inject
 constructor(val appDatabase: AppDatabase) : DbHelper {
-
-
-
+    override fun saveRecipes(list: MutableList<Recipe>): Flowable<Long> {
+        return appDatabase.recipeDao().insertAll(list)
+    }
 }

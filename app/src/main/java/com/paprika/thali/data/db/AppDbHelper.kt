@@ -11,7 +11,7 @@ import javax.inject.Inject
  */
 class AppDbHelper @Inject
 constructor(val appDatabase: AppDatabase) : DbHelper {
-    override fun saveRecipes(list: MutableList<Recipe>): Flowable<Long> {
+    override fun saveRecipes(list: MutableList<Recipe>): List<Long> {
         return appDatabase.recipeDao().insertAll(list)
     }
 }

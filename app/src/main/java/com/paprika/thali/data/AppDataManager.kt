@@ -16,7 +16,7 @@ class AppDataManager @Inject constructor(val apiHelper: ApiHelper, val dbHelper:
         return apiHelper.getRecipes()
     }
 
-    override fun saveRecipes(list: MutableList<Recipe>): Flowable<Long> {
+    override fun saveRecipes(list: MutableList<Recipe>): List<Long> {
         return dbHelper.saveRecipes(list)
     }
 

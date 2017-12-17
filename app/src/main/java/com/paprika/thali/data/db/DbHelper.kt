@@ -1,5 +1,6 @@
 package com.paprika.thali.data.db
 
+import android.arch.lifecycle.MutableLiveData
 import com.paprika.thali.data.db.room.Recipe
 
 /**
@@ -8,4 +9,7 @@ import com.paprika.thali.data.db.room.Recipe
 interface DbHelper {
 
     fun saveRecipes(list: MutableList<Recipe>): List<Long>
+
+    fun getAll(): MutableLiveData<MutableList<Recipe>>
+
 }

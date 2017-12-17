@@ -1,5 +1,6 @@
 package com.paprika.thali.ui.recipes
 
+import com.google.gson.Gson
 import com.paprika.thali.data.DataManager
 import dagger.Module
 import dagger.Provides
@@ -13,7 +14,7 @@ import io.reactivex.disposables.CompositeDisposable
 class RecipesActivityModule {
 
     @Provides
-    fun provideRecipesViewModel(dataManager: DataManager, compositeDisposable: CompositeDisposable): RecipesViewModel {
-        return RecipesViewModel(dataManager, compositeDisposable)
+    fun provideRecipesViewModel(dataManager: DataManager, compositeDisposable: CompositeDisposable, gson: Gson): RecipesViewModel {
+        return RecipesViewModel(dataManager, compositeDisposable, gson)
     }
 }

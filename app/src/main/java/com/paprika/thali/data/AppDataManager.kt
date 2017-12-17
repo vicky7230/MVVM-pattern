@@ -1,6 +1,6 @@
 package com.paprika.thali.data
 
-import android.arch.lifecycle.MutableLiveData
+import android.arch.lifecycle.LiveData
 import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.QuerySnapshot
 import com.paprika.thali.data.db.DbHelper
@@ -22,7 +22,7 @@ class AppDataManager @Inject constructor(val apiHelper: ApiHelper, val dbHelper:
         return dbHelper.saveRecipes(list)
     }
 
-    override fun getAll(): MutableLiveData<MutableList<Recipe>> {
+    override fun getAll(): LiveData<MutableList<Recipe>>? {
         return dbHelper.getAll()
     }
 }

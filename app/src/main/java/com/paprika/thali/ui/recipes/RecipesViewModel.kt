@@ -1,6 +1,6 @@
 package com.paprika.thali.ui.recipes
 
-import android.arch.lifecycle.MutableLiveData
+import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.ViewModel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -18,9 +18,9 @@ import timber.log.Timber
 class RecipesViewModel
 constructor(private val dataManager: DataManager, private val compositeDisposable: CompositeDisposable, private val gson: Gson) : ViewModel() {
 
-    var recipes: MutableLiveData<MutableList<Recipe>>? = null
+    var recipes: LiveData<MutableList<Recipe>>? = null
 
-    fun getRecipesFromFirebase(): MutableLiveData<MutableList<Recipe>>? {
+    fun getRecipesFromFirebase(): LiveData<MutableList<Recipe>>? {
 
         if (recipes == null) {
             recipes = dataManager.getAll()

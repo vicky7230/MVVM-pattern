@@ -26,7 +26,6 @@ class RecipesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recipes)
         init()
-
     }
 
     private fun init() {
@@ -34,7 +33,7 @@ class RecipesActivity : AppCompatActivity() {
         recipe_list.adapter = recipesAdapter
         recipesViewModel.getRecipesFromFirebase()?.observe(this, Observer { it: MutableList<Recipe>? ->
             run {
-                Toast.makeText(this, "Got it.", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, "Got it.", Toast.LENGTH_SHORT).show()
                 recipesAdapter.addItems(it)
             }
         })
